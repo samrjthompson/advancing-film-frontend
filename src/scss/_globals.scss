@@ -1,0 +1,31 @@
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+
+* {
+    font-family: 'sans-serif', sans-serif;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.display-center {
+    justify-content: center;
+    align-items: center;
+    border: 3px solid;
+    margin: 5vh 15vh;
+}
+
+.text-bold {
+    font-weight: bold;
+    color: blue;
+}
+
+.react-links {
+    color: black;
+}
+
+a:link {
+    //color: rgb(158, 172, 255);
+    text-decoration: none;
+}

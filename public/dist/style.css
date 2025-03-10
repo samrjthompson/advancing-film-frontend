@@ -1,0 +1,24 @@
+* {
+  font-family: 'sans-serif', sans-serif; }
+
+.flex {
+  display: flex;
+  flex-direction: column; }
+
+.display-center {
+  justify-content: center;
+  align-items: center;
+  border: 3px solid;
+  margin: 5vh 15vh; }
+
+.text-bold {
+  font-weight: bold;
+  color: blue; }
+
+.react-links {
+  color: black; }
+
+a:link {
+  text-decoration: none; }
+
+/*# sourceMappingURL=style.css.map */
