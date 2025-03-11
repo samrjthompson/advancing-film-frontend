@@ -13,6 +13,10 @@ const router = express.Router()
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+// Homepage
+router.route("/")
+    .get(catchAsync(controller.renderHomePage))
+
 router.route('/second_page')
     .get(catchAsync(controller.renderSecondPage))
 
