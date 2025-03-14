@@ -1,31 +1,21 @@
-//@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
-
 * {
     font-family: 'sans-serif', sans-serif;
 }
 
-.flex {
+.layout {
     display: flex;
-    flex-direction: column;
+    min-height: 100vh; /* Ensures the container spans the full viewport height */
 }
 
-.display-center {
-    justify-content: center;
-    align-items: center;
-    border: 3px solid;
-    margin: 5vh 15vh;
+.content {
+    flex: 1; /* Takes up the remaining space */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.text-bold {
-    font-weight: bold;
-    color: blue;
-}
-
-.react-links {
-    color: black;
-}
-
-a:link {
-    //color: rgb(158, 172, 255);
-    text-decoration: none;
+a:link,
+a:visited,
+a:active {
+    color: currentColor;
+    text-decoration: none; // removes underline
 }
