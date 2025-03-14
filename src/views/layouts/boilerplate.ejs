@@ -11,8 +11,12 @@
 
 </head>
     <body>
-        <main>
-            <%- body %>
-        </main>
+        <div class="layout">
+            <%-include('../partials/navbar')%>
+
+            <main class="content">
+                <%- body %>
+            </main>
+        </div>
     </body>
 </html>
