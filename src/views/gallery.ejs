@@ -1,23 +1,22 @@
-<%layout('layouts/boilerplate')%>
+<% layout('layouts/boilerplate') %>
 
-    <div class="container">
-        <div>
-            <h1>Gallery</h1>
-        </div>
 
-        <div class="gallery">
-            <% for (var i = 0; i < imageArray.length; i++) { %>
-            <div class="gallery-item">
-                <% if (imageArray[i].title !== null) { %>
-                    <h2><%= imageArray[i].title %></h2>
-                <% } %>
+<h1 class="content-item">Gallery</h1>
 
-                <% if (imageArray[i].content !== null) { %>
-                    <p><%= imageArray[i].content %></p>
-                <% } %>
+<% for (var i = 0; i < imageArray.length; i++) { %>
+    <div class="content-item">
+        <div class="content-subitem">
+            <% if (imageArray[i].title !== null) { %>
+                <h2><%= imageArray[i].title %></h2>
+            <% } %>
 
-                <img src="<%= imageArray[i].imageUrl %>" alt="Gallery image <%= i %>">
-            </div>
+            <% if (imageArray[i].content !== null) { %>
+                <p><%= imageArray[i].content %></p>
             <% } %>
         </div>
+
+        <div class="content-subitem">
+            <img src="<%= imageArray[i].imageUrl %>" alt="Gallery image <%= i %>">
+        </div>
     </div>
+<% } %>

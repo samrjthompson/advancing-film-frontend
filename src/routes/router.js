@@ -3,6 +3,7 @@ import path from 'path';
 import catchAsync from "../utils/catchAsync.js";
 import * as controller from "../controllers/controller.js";
 import {fileURLToPath} from "url";
+import {renderServices} from "../controllers/controller.js";
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -19,5 +20,8 @@ router.route("/")
 
 router.route("/gallery")
     .get(catchAsync(controller.renderGallery))
+
+router.route("/services")
+    .get(catchAsync(controller.renderServices))
 
 export default router;

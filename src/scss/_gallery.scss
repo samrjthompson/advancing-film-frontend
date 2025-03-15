@@ -1,18 +1,25 @@
-.gallery {
-  display: grid;
-  grid-template-columns: 1fr; // One column
-  grid-gap: 50px;
-  padding: 100px;
-  justify-items: center; // Horizontal
-  align-items: center; // Vertical
-}
+//.gallery {
+//  display: grid;
+//  grid-template-columns: 1fr; // One column
+//  //grid-gap: 50px;
+//  padding: 25px;
+//  justify-items: center; // Horizontal
+//  align-items: center; // Vertical
+//  border: 10px solid darkgreen;
+//}
 
-.gallery img {
-  width: 100%;
-  max-width: 100vh;
-  height: auto;
-}
-
-.gallery-item {
-  width: 100%;
-}
+//.gallery img {
+//  width: 100%;
+//  max-width: 100vh;
+//  height: auto;
+//}
+//
+//.gallery-item {
+//  display: grid;
+//  grid-template-columns: 1fr; // One column
+//  //grid-gap: 50px;
+//  padding: 25px;
+//  justify-items: left; // Horizontal
+//  //align-items: center; // Vertical
+//  border: 10px solid darkgreen;
+//}
