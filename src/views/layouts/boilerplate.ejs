@@ -12,7 +12,23 @@
 </head>
     <body>
         <div class="layout">
-            <%-include('../partials/navbar')%>
+            <!-- Hidden checkbox to control the navbar -->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+            <nav class="navbar">
+                <h1>
+                    <a href="/">Advancing Film</a>
+                </h1>
+                <ul>
+                    <li><a href="/gallery">Gallery</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+
+            <!-- Burger button that toggles the checkbox -->
+            <label for="nav-toggle" class="burger">☰</label>
 
             <main class="content">
                 <%- body %>

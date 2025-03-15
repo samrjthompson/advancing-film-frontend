@@ -1,24 +1,23 @@
 .navbar {
-  width: 250px;          /* Sidebar width */
+  width: 300px;          /* Sidebar width */
   background: white;
   backdrop-filter: blur(8px);  /* Creates a glass-like effect */
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
   padding: 20px;
-  box-sizing: border-box;
   transition: transform 0.5s ease, width 0.5s ease;
-  cursor: pointer;       /* Indicates it's clickable */
 }
 
 /* Collapsed state: move the navbar off-screen */
 .navbar.collapsed {
   width: 0;
-  transform: translateX(-250px);
-  overflow: hidden;
+  transform: translateX(-300px);
+  border: 1px solid;
 }
 
-.navbar h2 {
+.navbar h1 {
   color: #000000;
-  margin-bottom: 20px;
+  padding: 25px 0 25px 0;
+  min-width: 200px;
 }
 
 .navbar ul {
@@ -39,24 +38,28 @@
   transition: color 0.3s;
 }
 
-.burger {
-  opacity: 0;
-  transform: translateX(-20px);
-  pointer-events: none; /* Prevents clicks when not visible */
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #000000;
-  z-index: 1000;
-  cursor: pointer; /* Indicates it's clickable */
+@media (max-width: 1200px) {
+  .navbar {
+    display: none;
+  }
+  .burger {
+    position: fixed;
+    display: block;
+    cursor: pointer;
+    padding: 20px 0 0 20px;
+  }
 }
 
-.burger.visible {
-  opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
+@media (min-width: 1201px) {
+  .burger {
+    display: none;
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle:checked ~ .navbar {
+  display: block;
 }

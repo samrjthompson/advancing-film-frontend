@@ -8,9 +8,33 @@
 }
 
 .content {
-    flex: 1; /* Takes up the remaining space */
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
     padding: 20px;
-    box-sizing: border-box;
+}
+
+.content-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    align-items: center;
+}
+
+.content-item p, h2 {
+    padding: 10px;
+    max-width: 1100px;
+}
+
+.content-item img{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+.italicised {
+    font-style: italic;
 }
 
 a:link,

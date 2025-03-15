@@ -24,3 +24,7 @@ export const renderGallery = async (req, res) => {
 
     res.render('gallery', {imageArray});
 }
+
+export const renderServices = async (req, res) => {
+    res.render('services');
+}
