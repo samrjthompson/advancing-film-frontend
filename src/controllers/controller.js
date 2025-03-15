@@ -1,6 +1,7 @@
 import {httpRequest} from "../configs/axiosConfig.js";
 import TextBlock from "../models/textBlock.js";
 import {getImageUrls} from "../service/galleryService.js";
+import Image from "../models/image.js";
 
 export const renderHomePage = async (req, res) => {
     // const response = await httpRequest.get('/api/example')
@@ -11,5 +12,15 @@ export const renderHomePage = async (req, res) => {
 
 export const renderGallery = async (req, res) => {
     const imageUrls = await getImageUrls()
-    res.render('gallery', {imageUrls});
+
+    let imageArray = [];
+    for (const url of imageUrls) {
+        let image = new Image(
+            "My film photo",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, quam at ullamcorper pulvinar, ex nisl lacinia ante, vitae commodo nisl quam eget urna. Donec vitae lectus ac sem interdum tincidunt.",
+            url);
+        imageArray.push(image);
+    }
+
+    res.render('gallery', {imageArray});
 }

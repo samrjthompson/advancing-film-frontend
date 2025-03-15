@@ -1,13 +1,23 @@
 <%layout('layouts/boilerplate')%>
 
-<div class="container">
-
     <div class="container">
+        <div>
+            <h1>Gallery</h1>
+        </div>
+
         <div class="gallery">
-            <% for (var i = 0; i < imageUrls.length; i++) { %>
-                <img src="<%= imageUrls[i] %>" alt="Gallery image <%= i %>">
+            <% for (var i = 0; i < imageArray.length; i++) { %>
+            <div class="gallery-item">
+                <% if (imageArray[i].title !== null) { %>
+                    <h2><%= imageArray[i].title %></h2>
+                <% } %>
+
+                <% if (imageArray[i].content !== null) { %>
+                    <p><%= imageArray[i].content %></p>
+                <% } %>
+
+                <img src="<%= imageArray[i].imageUrl %>" alt="Gallery image <%= i %>">
+            </div>
             <% } %>
         </div>
     </div>
-
-</div>

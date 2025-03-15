@@ -90,6 +90,9 @@ a:active {
   max-width: 100vh;
   height: auto; }
 
+.gallery-item {
+  width: 100%; }
+
 * {
   margin: 0;
   padding: 0;
