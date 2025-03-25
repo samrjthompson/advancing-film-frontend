@@ -17,7 +17,10 @@ app.set('views', path.join(__dirname, 'views'));
 router.route("/")
     .get(catchAsync(controller.renderHomePage))
 
-router.route('/second_page')
-    .get(catchAsync(controller.renderSecondPage))
+router.route("/gallery")
+    .get(catchAsync(controller.renderGallery))
+
+router.route("/services")
+    .get(catchAsync(controller.renderServices))
 
 export default router;
