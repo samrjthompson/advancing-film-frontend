@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate') %>
+
+
+<h1 class="content-item">Gallery</h1>
+
+<% for (var i = 0; i < imageArray.length; i++) { %>
+    <div class="content-item">
+        <div>
+            <% if (imageArray[i].title !== null) { %>
+                <h2 class="italicised"><%= imageArray[i].title %></h2>
+            <% } %>
+
+            <% if (imageArray[i].content !== null) { %>
+                <p><%= imageArray[i].content %></p>
+            <% } %>
+        </div>
+
+        <div>
+            <img src="<%= imageArray[i].imageUrl %>" alt="Gallery image <%= i %>">
+        </div>
+    </div>
+<% } %>
